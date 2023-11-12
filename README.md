@@ -21,6 +21,7 @@ we start the console by this comman
 2- (HBNB) --> start using any of the CRUD (whether if the user needs to create, show, update or delete) 
 
 How to use it: 
+--------------------
 
 Interactive mode
 
@@ -59,6 +60,10 @@ Documented commands (type help <topic>):
 EOF  help  quit
 (hbnb) 
 $
+
+
+examples
+----------
 
 
 
