@@ -14,7 +14,10 @@ CRUD - (Create -Read -Update - Delete)
 where a user can create, update, show(read) or even destroy any object with its ID, and a class name.
 
 how to start it:- 
+-------------------
 
+we start the console by this comman 
+1- python3 console.py 
 
 
 
