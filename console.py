@@ -32,7 +32,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def help_quit(self):
-        """ this uits """ 
+        """ this help output """
         print("Quit command to exit the program")
 
     def do_EOF(self, line):
@@ -169,7 +169,7 @@ class HBNBCommand(cmd.Cmd):
             if new_key[0] == new_arg[0]:
                 counter = (counter + 1)
         print(counter)
-        
+
     def help_count(self):
         """
         counts the number of instances of a class
@@ -210,7 +210,7 @@ class HBNBCommand(cmd.Cmd):
                         ' ' + show_att_name + ' ' + show_att_val
                     print(arg)
                     self.do_update(arg)
-        
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
