@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Class FileStorage: 
+Class FileStorage:
 - Serialization of the instances and archiving 'JSON'
 - Deserialization of the file JSON represtanced by an object
 """
@@ -10,8 +10,8 @@ import os
 
 
 class FileStorage():
-    """ 
-    this class represants the File storage mechanism the is beign used 
+    """
+    this class represants the File storage mechanism the is beign used
     """
     # importing class models in here to avoid circular imports
     __file_path = "file.json"

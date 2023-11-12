@@ -67,10 +67,10 @@ class TestBaseModel(unittest.TestCase):
         self.assertLess(obj.created_at, obj.updated_at)
 
     def test_id_assign(self):
-        """ """
+        """ testing the id assignement """
         obj = BaseModel()
         self.assertIsInstance(obj.id, str)
-        self.assertEqual(len(obj.id), 36)        
+        self.assertEqual(len(obj.id), 36)
 
     def test_dict(self):
         """comprobar typo del update luego de to_dict()"""
@@ -93,7 +93,7 @@ class TestBaseModel(unittest.TestCase):
         obj = BaseModel()
         dic = obj.to_dict()
         self.assertIsInstance(dic, dict)
-    
+
     def test_dict_equal(self):
         """comprobar igualdad de attributos"""
         obj = BaseModel()

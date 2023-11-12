@@ -66,7 +66,7 @@ class test_amenity(unittest.TestCase):
         """
         chequeamos la documentacion
         """
-        self.assertIsNotNone(Amenity.__doc__)    
+        self.assertIsNotNone(Amenity.__doc__)
 
 
 if __name__ == '__main__':
