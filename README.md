@@ -18,6 +18,6 @@ how to start it:-
 
 we start the console by this comman 
 1- python3 console.py 
-2- (HBNB) --> start using any of the CRUD (whether if the user needs to create, 
+2- (HBNB) --> start using any of the CRUD (whether if the user needs to create, show, 
 
 
