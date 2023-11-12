@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""
-Class FileStorage:
-- Serialization of the instances and archiving 'JSON'
-- Deserialization of the file JSON represtanced by an object
-"""
+""" This is the storage engine handeller module """
 
 import json
 import os
