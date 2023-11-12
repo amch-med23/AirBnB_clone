@@ -57,3 +57,18 @@ class TestFileStorage(unittest.TestCase):
         base.save()
         base2 = BaseModel(**my_dict)
         self.assertFalse(os.stat('file.json').st_size == 0)
+    """Test FileStorage Class"""
+
+    def test_instances(self):
+        """ check instantation"""
+        obj = FileStorage()
+        self.assertIsInstance(obj, FileStorage)
+
+    def test_docs(self):
+        """check docmentation """
+        obj = FileStorage()
+        self.assertIsInstance(obj, FileStorage)
+        self.assertIsNotNone(FileStorage.new.__doc__)        
+        self.assertIsNotNone(FileStorage.all.__doc__)
+        self.assertIsNotNone(FileStorage.save.__doc__)
+        self.assertIsNotNone(FileStorage.reload.__doc__)
