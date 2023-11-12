@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-User class
+this is the class User, it inherents from BaseModel
 '''
 from models.base_model import BaseModel
 

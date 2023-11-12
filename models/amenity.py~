@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+"""The Amenity class inerents from BaseModel"""
+
+from models.base_model import BaseModel
+
+
+class Amenity(BaseModel):
+      """This class represents a place amenities."""
+      name = ""
