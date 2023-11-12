@@ -68,4 +68,18 @@ examples
 create Model 
 create <class name> Ex: create BaseModel
 
+show Model 
+
+show <class name> <object id> Ex: show User my_id
+
+Update Model 
+
+update <class name> <object id> Ex: update User my_id
+
+Destroy 
+
+delete <class name> <object id> Ex: delete User my_id
+
+
+
 
