@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-State class
+this is the class State, it inherents from BaseModel
 '''
 from models.base_model import BaseModel
 

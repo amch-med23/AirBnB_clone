@@ -8,11 +8,9 @@ import os
 class FileStorage():
     """ this class doc """
     # importing class models in here to avoid circular imports
-    
     __file_path = "file.json"
     __objects = {}
-    #class_dic = {}
-    
+
     def __init__(self):
         """ empty initialization """
         pass
@@ -20,14 +18,12 @@ class FileStorage():
     def all(self):
         """ this returns the private __object"""
         return self.__objects
-    
+
     def new(self, obj):
         """ sets id keys in the __object  """
-        #self.__objects[obj['__class__'] + '.' + obj['id']] = obj
         if obj:
             key = "{}.{}".format(obj.__class__.__name__, obj.id)
             self.__objects[key] = obj
-
 
     def save(self):
         """ serialize __objects to JSON file """
@@ -41,8 +37,13 @@ class FileStorage():
         """ deserializes JSON to __objects, only if the file exists """
         # importing the BaseModel in here in order to avoid circular import
         from models.base_model import BaseModel
+        from models.user import User
+        from models.city import City
+        from models.state import State
+        from models.amenity import Amenity
+        from models.review import Review
+        from models.place import Place
         # we must have all the models in here for 'val() to find them'
-        #ex : USer class and City ...
         if not os.path.isfile(self.__file_path):
             return
         else:
@@ -50,4 +51,3 @@ class FileStorage():
                 json_obj = json.load(file)
             for key, value in json_obj.items():
                 self.__objects[key] = eval(value["__class__"])(**value)
-
