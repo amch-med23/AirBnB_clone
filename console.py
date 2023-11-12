@@ -28,7 +28,7 @@ class HBNBCommand(cmd.Cmd):
                "State"]
 
     def do_quit(self, line):
-        """ This is a command to exit. """
+        """Quit command to exit the program """
         return True
 
     def do_EOF(self, line):
