@@ -32,10 +32,7 @@ class BaseModel():
 
     def __str__(self):
         """ this handels the printing of an instance of this class"""
-        return "[{}] ({}) {}".format(
-            self.__class__.__name__,
-            self.id,
-            self.__dict__)
+        return (f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}")
 
     def save(self):
         """ updates the updated_at instance to the current datetime """

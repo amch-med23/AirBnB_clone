@@ -28,8 +28,12 @@ class HBNBCommand(cmd.Cmd):
                "State"]
 
     def do_quit(self, line):
-        """Quit command to exit the program """
+        """ this quits """
         return True
+
+    def help_quit(self):
+        """ this uits """ 
+        print("Quit command to exit the program")
 
     def do_EOF(self, line):
         """ This is an EndOfFile method that handle Ctrl-D key stroke. """
@@ -149,76 +153,64 @@ class HBNBCommand(cmd.Cmd):
                         storage.save()
 
     def do_count(self, arg):
-        """counting the number of elements on a given class"""
-        base = storage.all()
-        count = 0
-        if arg in self.classes:
-            for key, value in base.items():
-                key_split = key.split('.')
-                if key_split[0] == arg:
-                    count += 1
-            print(count)
+        """
+        count number of instances by class
+        """
+        counter = 0
+
+        new_arg = arg.split(" ")
+        if new_arg[0] not in self.classes:
+            print("** class doesn't exist **")
+            return
+        new_list = storage._FileStorage__objects.items()
+        for key, value in new_list:
+            temp_key = str(key)
+            new_key = temp_key.split(".")
+            if new_key[0] == new_arg[0]:
+                counter = (counter + 1)
+        print(counter)
+        
+    def help_count(self):
+        """
+        counts the number of instances of a class
+        """
+        print("count <class>")
 
     def default(self, line):
-        """ this is a defaault method"""
-        base = storage.all()
-        comando = line.split(".")
-        entr = comando
-        if len(comando) > 1:
-            lista_ins = []
-            if comando[0] in self.class_val and comando[1] == "all()":
-                HBNBCommand.do_all(self, comando[0])
-            elif comando[0] in self.class_val and comando[1] == "count()":
-                HBNBCommand.do_count(self, comando[0])
-            elif comando[0] in self.class_val and "show" in comando[1]:
-                ide = comando[1].split('(')
-                ide1 = ide[1].split(')')
-                # print(f"{comando[0]}{ide1[0]}")
-                HBNBCommand.do_show(self, f"{comando[0]} {ide1[0]}")
-            elif comando[0] in self.class_val and "destroy" in comando[1]:
-                vari = comando[1].split('(')
-                aidi = vari[1].split(')')
-                # "id" -> strip -> limpio
-                id_cast = aidi[0].strip('"')
-                HBNBCommand.do_destroy(self, f"{comando[0]} {id_cast}")
-            elif entr[0] in self.class_val and "update" in entr[1]:
-                if "{" in comando[1]:
-                    ide = entr[1].split("(")[1].split(',')[0].replace('"', "")
-                    d = entr[1]
-                    d = d.split('(')[1].split('{')[1].split('}')[0].split(',')
-                    for i in d:
-                        valores = i.split(':')
-                        attr = valores[0].replace('"', "").replace("'", "")
-                        attr = attr.replace(" ", "")
-                        value = valores[1].replace('"', "").replace("'", "")
-                        value = value.replace(" ", "")
-                        clase = entr[0].strip("''")
-                        print(attr)
-                        print(value)
-                        print(entr[0])
-                        print(ide)
-                        line = f"{clase} {ide} {attr} {value}"
-                        HBNBCommand.do_update(self, line)
-                else:
-                    f_div = entr[1].split("(")
-                    # ['update', '"904a6d22-5860-41c2-8f92-4ca9d47562a9",
-                    #  "first_name", "santiago")']
-                    coma_div = f_div[1].split(',')
-                    # ['"904a6d22-5860-41c2-8f92-4ca9d47562a9"',
-                    # ' "first_name"', ' "santiago")']
-                    aidi = coma_div[0].strip('"')
-                    # ' "first_name"'
-                    attr = coma_div[1].strip().strip('"')
-                    # "santiago")'
-                    arg2 = coma_div[2].split(")")
-                    # [' "santiago"', '']
-                    val = arg2[0].strip()
-
-                    line = f"{entr[0]} {aidi} {attr} {val}"
-                    HBNBCommand.do_update(self, line)
-        else:
-            pass
-
+        '''
+        Advanced
+        '''
+        _cmd = storage.all()
+        if '.' in line:
+            cmd_parse = line.split('.')
+            class_name = cmd_parse[0]
+            method_name = cmd_parse[1]
+            if class_name in self.classes:
+                if method_name == 'all()':
+                    self.do_all(class_name)
+                if method_name == 'count()':
+                    self.do_count(class_name)
+                if method_name[0:5] == 'show(':
+                    method_name2 = method_name.split('"')
+                    show_id = method_name2[1]
+                    arg = class_name + ' ' + show_id
+                    print(arg)
+                    self.do_show(arg)
+                if method_name[0:8] == 'destroy(':
+                    method_name2 = method_name.split('"')
+                    show_id = method_name2[1]
+                    arg = class_name + ' ' + show_id
+                    self.do_destroy(arg)
+                if method_name[0:7] == 'update(':
+                    method_name2 = method_name.split('"')
+                    show_id = method_name2[1]
+                    show_att_name = method_name2[3]
+                    show_att_val = method_name2[5]
+                    arg = class_name + ' ' + show_id +\
+                        ' ' + show_att_name + ' ' + show_att_val
+                    print(arg)
+                    self.do_update(arg)
+        
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
