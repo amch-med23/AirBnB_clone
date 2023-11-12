@@ -11,6 +11,7 @@ class BaseModel():
     This is the base calss that all the classes will use as a base
     """
     def __init__(self, *args, **kwargs):
+        """ this initiation of the class"""
         if (kwargs is not None and len(kwargs) != 0):
             for key, value in kwargs.items():
                 if key == "__class__":
@@ -30,6 +31,7 @@ class BaseModel():
             storage.new(self)
 
     def __str__(self):
+        """ this handels the printing of an instance of this class"""
         return "[{}] ({}) {}".format(
             self.__class__.__name__,
             self.id,

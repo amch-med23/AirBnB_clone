@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This is the console entry point """
+""" This is the console entry point, this class uses cmd model """
 
 import cmd
 import json
@@ -28,21 +28,16 @@ class HBNBCommand(cmd.Cmd):
                "State"]
 
     def do_quit(self, line):
+        """ This is a command to exit. """
         return True
-
-    def help_quit(self):
-        print("This is a command to exit.")
-        # should return the string as well
 
     def do_EOF(self, line):
+        """ This is an EndOfFile method that handle Ctrl-D key stroke. """
         return True
-
-    def help_EOF(self):
-        print("This is an EndOfFile method that handle Ctrl-D key stroke.")
-        # should it be returned?
 
     # the create command
     def do_create(self, line):
+        """ Creates a new instance of the Objects """
         if not line:
             print("** class name missing **")
         elif not (line in self.classes):
@@ -55,11 +50,9 @@ class HBNBCommand(cmd.Cmd):
             obj.save()
             print(obj.id)
 
-    def help_create(self):
-        print("Creates a new instance of the Objects")
-
     # the show command
     def do_show(self, line):
+        """ Prints the string representation of the objects """
         args = line.split(" ")
         if not line:
             print("** class name missing **")
@@ -74,9 +67,6 @@ class HBNBCommand(cmd.Cmd):
                 print(all_objects[spec_class])
             else:
                 print("** no instance found **")
-
-    def help_show(self):
-        print("Prints the string representation of the objects.")
 
     def do_destroy(self, line):
         args = line.split(" ")
@@ -121,6 +111,7 @@ class HBNBCommand(cmd.Cmd):
         print("Prints all string representation of all instances.")
 
     def do_update(self, line):
+        """ Updates an instance based on the class name and id """
         args = line.split(" ")
         if line is None or len(line) < 1 or line == "":
             print("** class name is missing **")
@@ -146,11 +137,9 @@ class HBNBCommand(cmd.Cmd):
                         setattr(value, args[2], val)
                         storage.save()
 
-    def help_update(self):
-        print("Updates an instance based on the class name and id.")
-
     # this is to overwrite the emptyline public method
     def emptyline(self):
+        """ this is an overwrite """
         pass
 
 

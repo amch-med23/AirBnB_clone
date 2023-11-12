@@ -1,12 +1,18 @@
 #!/usr/bin/python3
-""" This model handles storage class """
+"""
+Class FileStorage: 
+- Serialization of the instances and archiving 'JSON'
+- Deserialization of the file JSON represtanced by an object
+"""
 
 import json
 import os
 
 
 class FileStorage():
-    """ this class doc """
+    """ 
+    this class represants the File storage mechanism the is beign used 
+    """
     # importing class models in here to avoid circular imports
     __file_path = "file.json"
     __objects = {}

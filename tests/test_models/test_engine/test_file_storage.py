@@ -17,7 +17,8 @@ class test_fileStorage(unittest.TestCase):
         self.assertIsInstance(obj, FileStorage)
 
     def test_docs(self):
-        """chequeamos documentacion"""
+        obj = FileStorage()
+        """checking the documentation"""
         self.assertIsInstance(obj, FileStorage)
         self.assertIsNotNone(FileStorage.new.__doc__)        
         self.assertIsNotNone(FileStorage.all.__doc__)
