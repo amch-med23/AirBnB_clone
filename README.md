@@ -65,5 +65,7 @@ $
 examples
 ----------
 
+create Model 
+create <class name> Ex: create BaseModel
 
 
