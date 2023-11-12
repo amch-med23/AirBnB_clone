@@ -20,4 +20,17 @@ we start the console by this comman
 1- python3 console.py 
 2- (HBNB) --> start using any of the CRUD (whether if the user needs to create, show, update or delete) 
 
+How to use it: 
+
+$ ./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+
+(hbnb) 
+(hbnb) 
+(hbnb) quit
+$
 
