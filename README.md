@@ -40,8 +40,8 @@ in Interactive mode: <br>
 $ ./console.py <br>
 (hbnb) help <br>
 
- ``Documented commands (type help &lt;topic&gt;):`` <br>
- ``---------------------------------------`` <br>
+ ``Documented commands (type help ``&lt;``topic``&gt;``):`` <br>
+ ``-------------------------------------------------`` <br>
  ``EOF   help   all   destroy   show   create   update   quit`` <br>
 
 (hbnb) <br>
@@ -55,7 +55,7 @@ non-interactive mode:<br>
 $ echo "help" | ./console.py <br>
 (hbnb) <br>
 
- ``Documented commands (type help &lt;topic&gt;):`` <br>
+ ``Documented commands (type help ``&lt;``topic``&gt;``):`` <br>
  ``---------------------------------------`` <br>
  ``EOF   help   all   destroy   show   create   update   quit`` <br>
 (hbnb) <br>
@@ -66,7 +66,7 @@ $ <br>
 $ cat test_help | ./console.py <br>
 (hbnb) <br>
 
- ``Documented commands (type help &lt;topic&gt;):`` <br>
+ ``Documented commands (type help ``&lt;``topic``&gt;``):`` <br>
  ``--------------------------------------- ``<br>
  ``EOF   help   all   destroy   show   create   update   quit ``<br>
 (hbnb) <br>
@@ -78,18 +78,24 @@ examples
 
 **Creating an Object based on a class name** <br>
 
-create &lt;class name&gt; Ex: create BaseModel <br>
+create &lt;class name&gt; <br> ``Ex: create BaseModel`` <br>
 
 -> this will output the id of the created object.<br>
  
 **Showing an Object** <br> 
 
-show &lt;class name&gt; &lt;object id&gt; Ex: show User it's_ID
+show &lt;class name&gt; &lt;object id&gt; <br> ``Ex: show User it's_id ``
+
+--> this will show the string representation of the object you specified
 
 **Updating an Object** <br>
 
-update &lt;class name&gt; &lt;object id&gt; Ex: update User it's_id
+update &lt;class name&gt; &lt;object id&gt; &lt;attribute name&gt; &lt;value&gt; <br> ``Ex: update User it'_id name Mohamed``
+
+-> this will update the specified attribute value to Mohamed in the specified instance
 
 **Destroying an Object** <br>
 
-destroy &lt;class name&gt; &lt;object id&gt; Ex: destroy User my_id
+-> this will destroy the specified object
+
+destroy &lt;class name&gt; &lt;object id&gt; <br> ``Ex: destroy User it's_id``
