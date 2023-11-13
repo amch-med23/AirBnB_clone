@@ -13,4 +13,73 @@ CRUD - (Create -Read -Update - Delete)
 
 where a user can create, update, show(read) or even destroy any object with its ID, and a class name.
 
+how to start it:- 
+-------------------
+
+we start the console by this comman 
+1- python3 console.py 
+2- (HBNB) --> start using any of the CRUD (whether if the user needs to create, show, update or delete) 
+
+How to use it: 
+--------------------
+
+Interactive mode
+
+
+$ ./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+
+(hbnb) 
+(hbnb) 
+(hbnb) quit
+$
+
+
+non-interactive mode
+
+$ echo "help" | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb) 
+$
+$ cat test_help
+help
+$
+$ cat test_help | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb) 
+$
+
+
+examples
+----------
+
+create Model 
+create <class name> Ex: create BaseModel
+
+show Model 
+
+show <class name> <object id> Ex: show User my_id
+
+Update Model 
+
+update <class name> <object id> Ex: update User my_id
+
+Destroy 
+
+delete <class name> <object id> Ex: delete User my_id
+
+
+
 
