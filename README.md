@@ -40,9 +40,9 @@ in Interactive mode: <br>
 $ ./console.py <br>
 (hbnb) help <br>
 
- Documented commands (type help &lt;topic&gt;): <br>
- ---------------------------------------
- EOF   help   all   destroy   show   create   update   quit <br>
+ ``Documented commands (type help &lt;topic&gt;):`` <br>
+ ``---------------------------------------`` <br>
+ ``EOF   help   all   destroy   show   create   update   quit`` <br>
 
 (hbnb) <br>
 (hbnb) <br>
@@ -55,9 +55,9 @@ non-interactive mode:<br>
 $ echo "help" | ./console.py <br>
 (hbnb) <br>
 
- ``Documented commands (type help &lt;topic&gt;): <br>
- --------------------------------------- <br>
- EOF   help   all   destroy   show   create   update   quit`` <br>
+ ``Documented commands (type help &lt;topic&gt;):`` <br>
+ ``---------------------------------------`` <br>
+ ``EOF   help   all   destroy   show   create   update   quit`` <br>
 (hbnb) <br>
 $ <br>
 $ cat test_help <br>
@@ -66,9 +66,9 @@ $ <br>
 $ cat test_help | ./console.py <br>
 (hbnb) <br>
 
- ``Documented commands (type help &lt;topic&gt;): <br>
- --------------------------------------- <br>
- EOF   help   all   destroy   show   create   update   quit ``<br>
+ ``Documented commands (type help &lt;topic&gt;):`` <br>
+ ``--------------------------------------- ``<br>
+ ``EOF   help   all   destroy   show   create   update   quit ``<br>
 (hbnb) <br>
 $ <br>
 
