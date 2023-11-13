@@ -6,7 +6,7 @@
 ## Language
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-- Name of the project : ``0x00. AirBnB clone - The console``
+- Name of the project : ``0x00 AirBnB clone - The console``
 - Authors : <br>
 [Mohamed Amouch](https://github.com/amch-med23) <br>
 [Asmaa Shehata](https://github.com/AsmaaShehataa)
@@ -40,9 +40,9 @@ in Interactive mode: <br>
 $ ./console.py <br>
 (hbnb) help <br>
 
- Documented commands (type help <topic>):<br>
+ Documented commands (type help &lt;topic&gt;): <br>
  ---------------------------------------
- EOF  help  all	destroy	 show  create  update  quit <br>
+ EOF   help   all   destroy   show   create   update   quit <br>
 
 (hbnb) <br>
 (hbnb) <br>
@@ -55,9 +55,9 @@ non-interactive mode:<br>
 $ echo "help" | ./console.py <br>
 (hbnb) <br>
 
- Documented commands (type help <topic>): <br>
+ ``Documented commands (type help &lt;topic&gt;): <br>
  --------------------------------------- <br>
- EOF  help  all  destroy  show  create  update  quit <br>
+ EOF   help   all   destroy   show   create   update   quit`` <br>
 (hbnb) <br>
 $ <br>
 $ cat test_help <br>
@@ -66,9 +66,9 @@ $ <br>
 $ cat test_help | ./console.py <br>
 (hbnb) <br>
 
- Documented commands (type help <topic>): <br>
+ ``Documented commands (type help &lt;topic&gt;): <br>
  --------------------------------------- <br>
- EOF  help  all  destroy  show  create  update  quit <br>
+ EOF   help   all   destroy   show   create   update   quit ``<br>
 (hbnb) <br>
 $ <br>
 
@@ -76,7 +76,7 @@ $ <br>
 examples
 ---------
 
-**Creating an Object based on a class name **<br>
+**Creating an Object based on a class name** <br>
 
 create &lt;class name&gt; Ex: create BaseModel <br>
 
@@ -86,10 +86,10 @@ create &lt;class name&gt; Ex: create BaseModel <br>
 
 show &lt;class name&gt; &lt;object id&gt; Ex: show User it's_ID
 
-**Updating an Object**<br>
+**Updating an Object** <br>
 
 update &lt;class name&gt; &lt;object id&gt; Ex: update User it's_id
 
-**Destroying an Object**<br>
+**Destroying an Object** <br>
 
 destroy &lt;class name&gt; &lt;object id&gt; Ex: destroy User my_id
